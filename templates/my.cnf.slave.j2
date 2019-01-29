@@ -15,6 +15,7 @@ log-bin
 binlog_format=mixed
 relay-log={{ maria_server_id }}-relay-bin
 log-basename={{ maria_server_id }}
+expire_logs_days=15
 
 {% for maria_db in maria_dbs %}
 binlog-do-db={{ maria_db.name }}
